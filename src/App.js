@@ -40,8 +40,9 @@ class App extends Component {
           {this.state.luckyNumbersArr.map((num) => (
             <MultiNumbers multiNumber={num} />
           ))}
-
-          <SingleNumber singleNumber={this.state.singleNumber} />
+          {this.state.singleNumber !== null && (
+            <SingleNumber singleNumber={this.state.singleNumber} />
+          )}
         </section>
         <button
           onClick={() =>
